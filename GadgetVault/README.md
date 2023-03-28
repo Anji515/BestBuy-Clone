@@ -1,9 +1,9 @@
-### Key Responcibiliteis:-
+## Key Responcibiliteis:-
 
-## Kommu Anjaneyulu - (Health & Wellness Products Page)
-## Lokendra Pal Shekhawat - (Signin/Signup,Cart,Paymet Pages)
-## Jayesh khandelwal - (Admin Page, API , created)
-## Harshal bhawsar -  (Home Page)
+#### Kommu Anjaneyulu - (Health & Wellness Products Page)
+#### Lokendra Pal Shekhawat - (Signin/Signup,Cart,Paymet Pages)
+#### Jayesh khandelwal - (Admin Page, API , created)
+#### Harshal bhawsar -  (Home Page)
 ## Aniket Ghormare  -(Electronics Products Page)
 
 # Getting Started with Create React App
