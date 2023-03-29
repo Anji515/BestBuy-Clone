@@ -1,8 +1,11 @@
+import { Box } from '@chakra-ui/react'
 import React from 'react'
 
 const HwSideBar = () => {
   return (
-    <div>HW_SideBar</div>
+    <Box width={'25%'}>
+      HW_SideBar
+    </Box>
   )
 }
 

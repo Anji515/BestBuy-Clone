@@ -1,10 +1,15 @@
-import React from 'react'
+import React from 'react';
+import { Box } from '@chakra-ui/react';
+import HwSideBar from './../../Components/H&WProductsComponents/HW_SideBar';
+import HwProductList from '../../Components/H&WProductsComponents/HwProductList';
+
 
 const HwPrdoucts = () => {
   return (
-    <div>
-      <h1>H&W_Prdoucts</h1>
-    </div>
+    <Box display={'flex'} >
+      <HwSideBar />
+      <HwProductList/>
+    </Box>
   )
 }
 
