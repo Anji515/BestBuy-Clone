@@ -1,6 +1,6 @@
 import React from 'react'
 
-const EatWell_Products = () => {
+const EatWellProducts = () => {
   return (
     <div>
         <h1>EatWell_Products</h1>
@@ -8,4 +8,4 @@ const EatWell_Products = () => {
   )
 }
 
-export default EatWell_Products
+export default EatWellProducts
