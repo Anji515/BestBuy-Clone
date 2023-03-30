@@ -3,7 +3,7 @@ export const Footer = () =>{
     return (
         <>
         <div className="footer">
-        <div class="sec_1">
+        <div className="sec_1" style={{display:"grid", gridTemplateColumns:"repeat(4,1fr)", justifyContent:"space-between"}}>
             <div>
                 <div>
                     <i class="fa-regular fa-circle-question font-60"></i>
@@ -28,16 +28,10 @@ export const Footer = () =>{
                 </div>
                 <a href="/">Returns & Exchanges</a>
             </div>
-            <div>
-                <div>
-                    <i class="fa-solid fa-dollar-sign font-60"></i>
-                </div>
-                <a href="/">Price Match Guarantee</a>
-            </div>
         </div>
-        <div class="hl"></div>
-        <div class="sec_2">
-            <div id="sec_2-1">
+        
+        <div className="sec_2" style={{display:"grid", gridTemplateColumns:"repeat(2,1fr)", width:"100%",justifyContent:"space-between"}}>
+            <div id="sec_2-1" style={{display:"grid", gridTemplateColumns:"repeat(3,1fr)",width:"100%"}}>
                 <div>
                     <h3>Order & Purchases</h3>
                     <p>Check Order Status</p>
@@ -79,16 +73,16 @@ export const Footer = () =>{
             </div>
             <div id="footer_form">
                 <p>Sign in or Create Account</p>
-                <div class="hl"></div>
+                <div className="hl"></div>
                 <h3>Get the latest deals and more.</h3>
                 <input type="text" placeholder="Enter email Address"/>
                 <input type="submit" value="Sign Up"/>
-                <div class="hl"></div>
+                <div className="hl"></div>
                 <div>
                     <i class="fa-solid fa-mobile-button"></i>
                     <span>Best Buy App </span>
                 </div>
-                <div class="hl"></div>
+                <div className="hl"></div>
                 <div>
                     <i class="fa-brands fa-facebook"></i>
                     <i class="fa-brands fa-twitter"></i>
@@ -96,18 +90,13 @@ export const Footer = () =>{
                     <i class="fa-brands fa-pinterest"></i>
                     <i class="fa-brands fa-youtube"></i>
                 </div>
-                <div class="hl"></div>
                 <p>Forums, blogs & more</p>
             </div>
         </div>
-        <div>
+        <div style={{marginLeft:"30px"}}>
             <p>How was your experience?<span>Give feedback about our website</span></p>
-            <div>
-                <p>Mobile Site</p>
-                <p>Best Buy Canada</p>
-            </div>
         </div>
-        <div class="hl"></div>
+        <div className="hl"></div>
         <div id="sec_3">
             <div>
                 <p>Accessibility</p>

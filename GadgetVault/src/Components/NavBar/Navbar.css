@@ -17,7 +17,7 @@
 #main{
     height: 70px;
     width: 100%;
-    min-width: 100vw;
+    /* min-width: 100vw; */
     background-color: 
     #0046be;
     display: flex;
@@ -58,22 +58,12 @@
     border-right: white;
     margin-left: 2%;
 }
-/* #main > select{
-    background-color: #0046be;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    border: 1px solid #0046be;
-    width: 6%;
-} */
+
 
 /* Drop down  */
 
 .dropbtn {
-    /* background-color: #3498DB;
-    color: white;
-    padding: 16px;
-    font-size: 16px; */
+    
     background-color: #0046be;
     color: white;
     font-weight: bold;
@@ -250,11 +240,11 @@
      }
 
     /* First div  */
-    /* #main > select{
+    #main > select{
         font-size: 18px;
         width: 30%;
         margin-left: 0%;
-    } */
+    }
     #main > img:first-child{
         height: 60%;
     }

@@ -1,3 +1,5 @@
+import { SliderOne } from "./Carusel/sliderone"
+import { SliderTwo } from "./Carusel/slidertwo"
 import "./Homepage.css"
 export const HomePage = () => {
     return(
@@ -13,7 +15,24 @@ export const HomePage = () => {
     <div>
       <div id="first">
         <p>Today's popular picks</p>
-        <div></div>
+        <div>
+          <div>
+            <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/4900/4900942_sd.jpg;maxHeight=640;maxWidth=550" alt="Apple - AirPods Pro (with Magsafe..." />
+            <p>Apple - AirPods Pro with Magsafe...</p>
+          </div>
+          <div>
+            <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6487/6487447_sd.jpg;maxHeight=640;maxWidth=550" alt="Apple - iPhone 13 Pro Max 5G 128GB - Alpin..." />
+            <p>Apple - iPhone 13 Pro Max 5G 128GB - Alpin...</p>
+          </div>
+          <div>
+            <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6215/6215932_sd.jpg;maxHeight=640;maxWidth=550" alt="Apple Watch Series 7 (GPS) 41mm Midnight..." />
+            <p>Apple Watch Series 7 (GPS) 41mm Midnight...</p>
+          </div>
+          <div>
+            <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/5721/5721600_sd.jpg;maxHeight=640;maxWidth=550" alt="MacBook Air 13.3 Laptop - Apple M1..." />
+            <p>MacBook Air 13.3 Laptop - Apple M1...</p>
+          </div>
+        </div>
       </div>
       <div id="second">
         <div>
@@ -43,9 +62,10 @@ export const HomePage = () => {
 
   <div id="secondsec">
     <p>Most-viewed items</p>
+    <SliderOne/>
+    {/* <div id="secondsec1">
     
-    <div id="secondsec1">
-    </div>
+    </div> */}
     <div id="secondsec2">
       <div>
         <img
@@ -136,21 +156,21 @@ export const HomePage = () => {
     <div id="bar_main">
       <div id="bar">
         
-        <div class="positn-abs">
+        <div className="positn-abs">
           <h2>Best Buy</h2>
           <h1>Total Tech</h1>
           <button id="bar-btn">Learn More</button>
         </div>
-        <div class="Vl positn-abs"></div>
+        <div className="Vl positn-abs"></div>
        
-        <div class="positn-abs">
+        <div className="positn-abs">
           
           <h1>The membership you and your tech deserve.</h1>
           <p>Best Buy Totaltech™ provides 24/7/365 tech support, up to 24 months of product protection with active
             membership, free standard installation and so much more.</p>
           <p>Terms and conditions apply*.</p>
         </div>
-        <div class="positn-abs">
+        <div className="positn-abs">
           
           <img src="/Assets-1/worker.png" alt="workers"/>
         </div>
@@ -158,9 +178,9 @@ export const HomePage = () => {
     </div>
   </div>
 
-  <div id="fifthsec">
+  <div id="fifthsec" style={{width:"100%"}}>
     <div>
-      <p>Father's Day gifts</p>
+      <p>Everyday Gadgets</p>
       <div>
         <div>
           <img
@@ -254,27 +274,7 @@ export const HomePage = () => {
 
   <div id="sixthsec">
     <p>Our featured offers</p>
-    
-    <div></div>
-  </div>
-
-
-
-  <div id="seventhsec">
-    <p><span> Related to items you've viewed</span>
-      <span>(6 items)</span>
-    </p>
-    
-    <div></div>
-  </div>
-
-
-
-  <div id="eighthsec">
-    <p><span> You may also like</span>
-      <span>(6 items)</span>
-    </p>
-    
+    <SliderTwo/>
     <div></div>
   </div>
 
@@ -297,8 +297,8 @@ export const HomePage = () => {
         <p>Save when you shop the Best Buy Outlet for clearance, open-box, refurbished and pre-owned items.</p>
       </div>
       <div>
-        <img src="" alt=""/>
-        <p></p>
+        <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/5721/5721600_sd.jpg;maxHeight=272;maxWidth=400" alt=""/>
+        <p>Save upto %700 on Macbook</p>
         <p></p>
       </div>
     </div>
@@ -313,15 +313,6 @@ export const HomePage = () => {
       <p>in rewards on your first day of purchases when you are approved for the Card.</p>
       <button>Learn More</button>
     </div>
-  </div>
-
-  
-
-  <div id="tenthsec">
-    <p><span>Featured products</span>
-      <span>(6 items)</span>
-    </p>
-    <div></div>
   </div>
         </>
     )

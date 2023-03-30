@@ -13,13 +13,9 @@
 
 
 .sec_1{
-    display: grid;
-    gap: 30px;
-    grid-template-columns: repeat(5,1fr);
+    width: 100%;
+    gap: 15px;
     text-align: center;
-}
-.sec_1>div{
-    padding: 60px;
 }
 .sec_1>div:hover{
     cursor: pointer;
@@ -49,17 +45,17 @@
     margin: auto;
 }
 
-.sec_2{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
 #sec_2-1{
     margin-top: 10px;
     display: grid;
     grid-template-columns: repeat(3 , 1fr);
     grid-template-rows: repeat(2 , 1fr);
+    /* border: 1px solid red; */
+}
+
+#sec_2-1>div{
+    /* border: 1px solid pink; */
+    width: 260px;
 }
 
 #sec_2-1>div>h3{
@@ -69,6 +65,7 @@
     color: rgb(9,90,201);
     font-family: 'Poppins' , sans-serif;
     padding-top: 20px;
+    
 }
 footer>div:nth-child(4){
     display: flex;
@@ -90,12 +87,15 @@ footer>div:nth-child(4)>div>p{
     margin-right: 40px;
 }
 
-
-#footer_form{
+/* .sec_2>div:nth-child(2){
+    border: 1px solid green;
+width: 10px;
+} */
+ #footer_form{
     background-color: white;
-    width: 30%;
     padding: 10px 20px 10px 30px;
-    margin-top: 20px;
+    width: 10px;
+    margin-top: 10px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 5px;
 }
@@ -161,15 +161,17 @@ footer>div:nth-child(4)>div>p{
     font-size: 13px;
     width: 90%;
     margin-top: 30px;
+    margin-left: 30px;
     font-family: 'Poppins' , sans-serif;
 }
 #sec_3>div:last-child{
     color: rgb(115, 115, 115);
     width: 90%;
     font-size: 15px;
-    margin-top: 20px;
+    margin-top: 10px;
     font-family: 'Poppins' ,sans-serif;
-    margin-left: 20px;
+    margin-left: 30px;
+    margin-bottom: 37px;
 }
 
 @media all and (min-width: 1324px) and (max-width: 1524px){
@@ -182,7 +184,7 @@ footer>div:nth-child(4)>div>p{
         grid-template-columns: repeat(3, 1fr);
     }
     #footer_form{
-        width: 50%;
+        width: 100%;
     }
     #sec_2{
         grid-template-columns: 1fr;
