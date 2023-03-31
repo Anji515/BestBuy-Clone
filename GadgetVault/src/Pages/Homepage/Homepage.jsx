@@ -62,7 +62,7 @@ export const HomePage = () => {
 
   <div id="secondsec">
     <p>Most-viewed items</p>
-    <SliderOne/>
+    {/* <SliderOne/> */}
     {/* <div id="secondsec1">
     
     </div> */}
@@ -274,7 +274,7 @@ export const HomePage = () => {
 
   <div id="sixthsec">
     <p>Our featured offers</p>
-    <SliderTwo/>
+    {/* <SliderTwo/> */}
     <div></div>
   </div>
 
