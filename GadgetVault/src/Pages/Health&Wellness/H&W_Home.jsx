@@ -2,8 +2,21 @@ import React from 'react'
 import {Box, Button, Flex, Heading, Image, SimpleGrid, Text,Breadcrumb,BreadcrumbItem, BreadcrumbLink} from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import { helpInImages, homeImages, solutionImages } from '../../Components/H&WProductsComponents/HwImages' // Imported Images
+import { Navigate, useNavigate } from 'react-router-dom'
 
 const HwHome = () => {
+
+  const navigate=useNavigate()
+
+  const hanldePage=(id)=>{
+     console.log('id:', id)
+     if(id==1){
+     navigate('/HwPrdoucts')
+     }
+     if(id==2){
+      navigate('/EwPrdoucts')
+      }
+  }
 
   return (
     <div >
@@ -31,7 +44,7 @@ const HwHome = () => {
          <br />
        <SimpleGrid columns={[2,2,3,3,6,6]} width={'72%'} justifyContent={'center'} p={10} gap='25px' alignItems={'center'} >
        {homeImages && homeImages?.map((item)=>(
-                <Box _hover={{textDecoration:'underline',color:'blue'}} cursor='pointer' align='center' width={'100%'} key={item.id}>
+                <Box onClick={()=>hanldePage(item.id)} _hover={{textDecoration:'underline',color:'blue'}} cursor='pointer' align='center' width={'100%'} key={item.id}>
                 <Image borderRadius={'50%'} width='100%' src={item.image} alt={item.name}/>
                 <Heading color='#0457c8' noOfLines={1} fontSize={'14px'}>{item.name}</Heading>
                 {/* <Text noOfLines={2} fontSize={'16px'}>{item.body}</Text> */}
