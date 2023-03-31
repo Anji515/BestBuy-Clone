@@ -25,3 +25,13 @@ export const helpInImages=[
     {image:'https://pisces.bbystatic.com/image2/BestBuy_US/dam/SOL-104719_pol_COPE_DER-2adf42c0-f3fe-4dab-a0dd-5e206fdade62.jpg;maxHeight=130;maxWidth=192',body:'Trained agents are ready to help in case of an emergency, big or small. Urgent Response is available with all Lively Health & Safety packages.',name:'Help in emergencies — 24/7.',id:2},
     {image:'https://pisces.bbystatic.com/image2/BestBuy_US/Gallery/call_center_mainpage_sol67850_der-185643.jpg;maxHeight=130;maxWidth=192',body:'Find connected-care offerings, along with vendor partnerships and technology leaders that help deliver long-term success for your business.',name:'Commercial services with Best Buy Health.',id:3},
     {image:'https://pisces.bbystatic.com/image2/BestBuy_US/dam/SOL_88457_pol_COPE_home_gym_2_DER-6384f008-166c-4765-ac01-976d92308025.jpg;maxHeight=130;maxWidth=192',body:'Set up a virtual appointment with a Best Buy Home Expert, or choose an in-home consult to help get your home fitness area started.',name:'Consultation for setting up home fitness solutions.',id:4} ]
+
+    export const shopByImages=[
+      {image:'https://i.ibb.co/KrfcbZV/2.png',name:'Help in emergencies — 24/7.',id:2},
+      {image:'https://i.ibb.co/WBgy888/1.png',name:'Get reimbursed for HSA- and FSA-eligible products.*',id:1},
+      {image:'https://i.ibb.co/J7YhqQB/3.png',name:'Commercial services with Best Buy Health.',id:3},
+      {image:'https://i.ibb.co/HBB5gXf/4.png',name:'Consultation for setting up home fitness solutions.',id:4} ]
+  
+      
+
+

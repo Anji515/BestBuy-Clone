@@ -73,10 +73,10 @@ export const HomePage = () => {
         </div>
       </div>
 
-      <div id="secondsec">
-        <p>Most-viewed items</p>
-        {/* <SliderOne /> */}
-        {/* <div id="secondsec1">
+  <div id="secondsec">
+    <p>Most-viewed items</p>
+    {/* <SliderOne/> */}
+    {/* <div id="secondsec1">
     
     </div> */}
         <div id="secondsec2">
@@ -338,6 +338,48 @@ export const HomePage = () => {
           <button>Learn More</button>
         </div>
       </div>
-    </>
-  );
-};
+    </div>
+  </div>
+  <div id="sixthsec">
+    <p>Our featured offers</p>
+    {/* <SliderTwo/> */}
+    <div></div>
+  </div>
+
+  <div id="ninthsec">
+    <div>
+      <div>
+        <img
+          src="https://pisces.bbystatic.com/image2/BestBuy_US/Gallery/GL-37400-pol-dotd-190823_der-98962.png;maxHeight=280;maxWidth=412"
+          alt=""/>
+        <p>Deal of the Day.</p>
+        <p>Great deals. Every day.</p>
+      </div>
+      <div>
+        <img
+          src="https://pisces.bbystatic.com/image2/BestBuy_US/Gallery/GL-37504-pol-outlet-190823-98410.png;maxHeight=280;maxWidth=412"
+          alt=""/>
+        <p>Clearance, open-box and more.</p>
+        <p>Save when you shop the Best Buy Outlet for clearance, open-box, refurbished and pre-owned items.</p>
+      </div>
+      <div>
+        <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/5721/5721600_sd.jpg;maxHeight=272;maxWidth=400" alt=""/>
+        <p>Save upto %700 on Macbook</p>
+        <p></p>
+      </div>
+    </div>
+    <div>
+      <img
+        src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/GL-66611-cb-fs-211018-6dd3346e-0ef8-458c-b16d-5ff2264fbb11.png"
+        alt=""/>
+      <div>
+        <p>Apply today and get</p>
+        <p>10% back</p>
+      </div>
+      <p>in rewards on your first day of purchases when you are approved for the Card.</p>
+      <button>Learn More</button>
+    </div>
+  </div>
+        </>
+    )
+}
