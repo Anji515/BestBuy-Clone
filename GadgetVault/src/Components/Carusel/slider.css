@@ -1,0 +1,9 @@
+.SliderTwo{
+    /* border: 1px solid black; */
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.SliderTwo img{
+    width: 260px;
+    height: 190px;
+}
