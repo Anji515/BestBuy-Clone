@@ -1,5 +1,4 @@
 import React from 'react'
-import { Routes, Route } from 'react-router-dom';
 import AdminDashboard from '../Pages/Admin/AdminDashboard';
 import HwHome from './../Pages/Health&Wellness/H&W_Home';
 import HwPrdoucts from './../Pages/Health&Wellness/H&W_Prdoucts';
