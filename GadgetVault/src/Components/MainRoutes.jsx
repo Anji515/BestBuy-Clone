@@ -1,12 +1,14 @@
 import React from 'react'
 import { Routes,Route } from 'react-router-dom';
+import EatWellProducts from '../Pages/EatWell/EatWellProducts';
+
 import { About } from '../Pages/Admin/About';
 import Add from '../Pages/Admin/Add';
 import AdminDashboard from '../Pages/Admin/AdminDashboard';
 import Analytics from '../Pages/Admin/Analytics';
+
 import Electronics from '../Pages/Electronics';
 import { HomePage } from '../Pages/Homepage/Homepage';
-
 import HwHome from './../Pages/Health&Wellness/H&W_Home';
 import HwPrdoucts from './../Pages/Health&Wellness/H&W_Prdoucts';
 import Sidebar from './AdminDashboard/Sidebar';
@@ -19,6 +21,8 @@ const MainRoutes = () => {
            <Route path='/' element={<HomePage/>} />
            <Route path='/hwhome' element={<HwHome/>}/>
            <Route path='/HwPrdoucts' element={<HwPrdoucts/>}/>
+           <Route path='/electronics' element={<HwPrdoucts/>}/>
+           <Route path='/EwPrdoucts' element={<HwPrdoucts/>}/>
            <Route path='/electronics' element={<Electronics/>}/>
          </Routes>
       <Sidebar>
