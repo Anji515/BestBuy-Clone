@@ -15,12 +15,14 @@ import {
   Text,
   useToast,
 } from "@chakra-ui/react";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { SignIn, SignUp } from "../../Redux/AuthReducer/action";
+import { AdminSide } from "../../ContextAPi/AdminProvider";
 
 export const Login = () => {
+  const { setAdmin } = useContext(AdminSide);
   // User Data States
   const [content, setContent] = useState("Sign In");
   const [email, setEmail] = useState("");
@@ -79,7 +81,15 @@ export const Login = () => {
         }
       });
     } else if (content === "Login As Admin") {
-      console.log("success");
+      if (email === "admin@gmail.com" && password === "admin") {
+        setAdmin(true);
+      } else {
+        toast({
+          title: `Invail Email or Password`,
+          status: "error",
+          isClosable: true,
+        });
+      }
     }
   };
   return (
