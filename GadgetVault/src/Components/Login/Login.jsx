@@ -83,7 +83,7 @@ export const Login = () => {
     } else if (content === "Login As Admin") {
       if (email === "admin@gmail.com" && password === "admin") {
         setAdmin(true);
-        navigate("/admin")
+        navigate("/about")
       } else {
         toast({
           title: `Invail Email or Password`,

@@ -53,6 +53,7 @@ export const SingleProduct = () => {
 
   const handleCart = () => {
     if (auth) {
+      data.count = 1;
       localstorageData.push(data);
       localStorage.setItem("Cart", JSON.stringify(localstorageData));
       alert("success");
