@@ -16,6 +16,12 @@ const HwHome = () => {
      if(id==2){
       navigate('/EwPrdoucts')
       }
+    if(id==3){
+        navigate('/electronics')
+        }
+        if(id==4){
+          navigate('/Mobiles')
+          }
   }
 
   return (
@@ -23,14 +29,14 @@ const HwHome = () => {
         <Box width={'62%'} align='left' m={'auto'}>
          <Breadcrumb color={'blue.400'} spacing='8px' separator={<ChevronRightIcon color='gray.500' />}>
           <BreadcrumbItem>
-           <BreadcrumbLink href='/'>GadgetVault</BreadcrumbLink>
+           <BreadcrumbLink href='/' color={'whatsapp.500'}>GadgetVault</BreadcrumbLink>
            </BreadcrumbItem>
 
              <BreadcrumbItem isCurrentPage>
-             <BreadcrumbLink href='#'>Health & Wellness</BreadcrumbLink>
+             <BreadcrumbLink color={'whatsapp.800'}>Health & Wellness</BreadcrumbLink>
             </BreadcrumbItem>
          </Breadcrumb>
-         <Heading fontSize={'25px'}>Health & Wellness Solutions</Heading>
+         <Heading fontSize={'25px'} color={'whatsapp.800'}>Health & Wellness Solutions</Heading>
         </Box>
 
         <br />
@@ -38,7 +44,7 @@ const HwHome = () => {
          {/* Health and wellness list of products. */}
         <Box width={'100%'} bg='#ebedf0' align='center' padding={10} margin={'auto'}>
         <Flex direction={'column'}>
-         <Heading>Healthy living starts here.</Heading>
+         <Heading color={'whatsapp.800'}>Healthy living starts here.</Heading>
          <p>Shop the technology and solutions to help you stay fit and manage your family’s health.</p>
          </Flex>
          <br />
@@ -57,7 +63,7 @@ const HwHome = () => {
        <Box w={'70%'} margin='auto'>
         <Flex direction={['column','column','row','row',]} padding='20px' bg='#5bb9e2' width={'90%'} m={'auto'} align='center' justifyContent={'center'} gap='18px'>
           <Image width={['65%','45%','35%','15%']} src='https://pisces.bbystatic.com/image2/BestBuy_US/dam/SOL-91312_blue_shirt_training-600ad701-8963-4ae0-83a5-f8d56f9380e6.jpg;maxHeight=272;maxWidth=400' alt='storeVisit'/>
-          <Heading color='#fffefd' fontSize={'25px'}>A Certified Personal Trainer 
+          <Heading color='#fffefd' fontSize={'25px'} >A Certified Personal Trainer 
             <br />
             wants to talk live with you.</Heading>
           <Button>Visit the Virtual Store</Button>
@@ -85,7 +91,7 @@ const HwHome = () => {
        </Box>
 
        {/* Health and wellness solutions Component. */}
-       <Heading>Health and wellness solutions.</Heading>
+       <Heading align='center' color={'whatsapp.800'}>Health and wellness solutions.</Heading>
        <Box width={'100%'} align='center' margin={'auto'}>
        <SimpleGrid columns={[2,2,3,3]} width={'68%'} justifyContent={'center'} p={10} gap='25px' alignItems={'center'} >
        {solutionImages && solutionImages?.map((item)=>(
@@ -98,7 +104,7 @@ const HwHome = () => {
          </SimpleGrid>
        </Box>
 
-       <Heading>Health and wellness solutions.</Heading>
+       <Heading align='center' color={'whatsapp.800'}>Health and wellness solutions.</Heading>
        <Box width={'100%'} align='center' margin={'auto'}>
        <SimpleGrid columns={[2,2,2,2]} width={['100%','68%','68%']} justifyContent={'center'} p={10} gap='25px' alignItems={'center'} >
        {helpInImages && helpInImages?.map((item)=>(
@@ -113,7 +119,7 @@ const HwHome = () => {
        
        <Box width={'63%'} border={'1px solid grey'} align='center' margin={'auto'}>
        <br />
-           <Heading align='left' marginLeft={'20px'} fontSize={'24px'}>Prioritizing health and wellness.</Heading>
+           <Heading align='left' marginLeft={'20px'} fontSize={'24px'} color={'whatsapp.800'}>Prioritizing health and wellness.</Heading>
            <br />
            <Flex  width={'100%'} direction={['column','column','row','row']} borderTop={'1px solid grey'} >
                 <Box  p='20px' align='center' width={'100%'} >

@@ -8,12 +8,14 @@ import {
   Image,
   CircularProgress,
   Center,
+  Grid,
 } from "@chakra-ui/react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   getEwProducts,
   getHwProducts,
   getLaptopProducts,
+  getMobileProducts,
 } from "../../Redux/HwProducts/action";
 // import HwProductCard from './HwProductCard';
 import { shopByImages } from "./HwImages";
@@ -24,7 +26,7 @@ import { Link, useLocation, useSearchParams } from "react-router-dom";
 
 const HwProductList = () => {
   //  Store Data
-  const { HwProducts, Electronics, EwProducts, isLoading } = useSelector(
+  const { HwProducts, Electronics,Mobiles, EwProducts, isLoading } = useSelector(
     (state) => state.HwReducer
   );
   console.log("EwProducts:", Electronics);
@@ -39,6 +41,8 @@ const HwProductList = () => {
     productsData = EwProducts;
   } else if (pathname == "/electronics") {
     productsData = Electronics;
+  }  else if (pathname == "/Mobiles") {
+    productsData = Mobiles;
   }
   console.log("productsData:", productsData);
 
@@ -114,26 +118,21 @@ const HwProductList = () => {
   }, [searchParam]);
 
   useEffect(() => {
+    dispatch(getMobileProducts(paramObj));
+  }, [searchParam]);
+
+  useEffect(() => {
     window.localStorage.setItem("Cart", JSON.stringify(cart));
   }, [cart]);
 
   return (
     <Flex width={["100%", "85%", "85%", "72%"]} flexDirection={"column"}>
-      {/* <Heading align='left' p={'5px'} fontSize={'22px'} borderBottom='0px solid gray'>Shop by type</Heading>
-               <SimpleGrid width={['100%','85%','100%','100%']} border='0px solid red' gap={'5px'} columns={[4,4,4,4]}>
-        {shopByImages && shopByImages?.map((item)=>(
-                <Box height={['30vh','45vh','50vh','50vh']} border='0px solid grey' _hover={{textDecoration:'underline',color:'blue'}} cursor='pointer' align='center' width={'100%'} key={item.id}>
-                <Image height={['25vh','35vh','40vh']} borderRadius={'50%'} width={['100%','100%']} src={item.image} alt={item.name}/>
-                <Heading color='#0457c8' noOfLines={1} fontSize={'14px'}>{item.name}</Heading>
-               </Box>)
-             )}
-        </SimpleGrid> */}
       <br />
       <Flex justifyContent={"space-between"}>
         <Heading
           fontSize={"14px"}
           marginLeft="10px"
-          color={HwProducts.length ? "black" : "red"}
+          color={productsData.length>0 ? "black" : "red"}
         >
           {productsData && productsData.length} items
         </Heading>
@@ -142,28 +141,29 @@ const HwProductList = () => {
         <SimpleGrid width={"100%"} marginTop="25px">
           {productsData &&
             productsData?.map((el) => (
-              // <HwProductCard handleCart={handleCart} key={el.id} {...el} />
-
-              <Box width={"100%"} border="0px solid red" key={el.id}>
-                <Flex border="0px solid blue">
+                <Flex border="0px solid blue" _hover={{
+                  width:'102%',
+                  bg:'whitesmoke'
+                }} borderRadius={'16px'} boxShadow= ' rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;' marginBottom='15px' justifyContent={'space-around'}>
                   <Box
-                    width={["100%", "100%", "100%", "60%"]}
+                    width={['100%','70%','60%','30%']}
                     padding="10px"
                     align={"center"}
                   >
                     <Link to={`/products/${el.id}`}>
                       <Image
                         height={"200px"}
-                        width={["100%", "60%", "70%", "50%"]}
+                        // width={'50%'}
+                        width={["70%", "70%", "70%", "50%"]}
                         src={el.image[0]}
                         alt={el.brand}
                       />
                     </Link>
                   </Box>
-
+                  <Box  width={'100%'} display={'flex'} flexDirection={['column','column','row']}>
                   <Box
                     textAlign={"left"}
-                    width={["40%", "80%", "80%"]}
+                    width={["80%", "80%", "60%"]}
                     border="0px solid green"
                   >
                     <Link to={`/products/${el.id}`}>
@@ -190,14 +190,14 @@ const HwProductList = () => {
                     </Link>
                   </Box>
 
-                  <Box width={["35%", "40%", "40%", "50%"]}>
+                  <Box border={"0px solid grey"}  width={["80%", "85%", "40%"]}>
                     <Heading textAlign={"left"} fontSize="28px">
                       ${el.price}
                     </Heading>
-                    <Flex
-                      width={"100%"}
+                    <Flex 
+                      width={["100%","100%","100%"]}
                       gap="10px"
-                      direction={["column", "row"]}
+                      direction={["column",'column','column', "row"]}
                       border={"0px solid grey"}
                     >
                       {el.saving && (
@@ -210,14 +210,14 @@ const HwProductList = () => {
                           }}
                           bg="whatsapp.300"
                           disabled={true}
-                          width={["100%", "85%", "65%", "35%"]}
+                          width={["100%", "100%","100%","100%", "45%"]}
                           fontSize="14px"
                         >
                           Savings : $ {el.saving}
                         </Button>
                       )}
                       <Heading
-                        width={["100%", "85%", "65%", "30%"]}
+                        width={["100%", "85%", "65%", "45%"]}
                         borderRadius={"16px"}
                         align="center"
                         marginTop={"10px"}
@@ -234,7 +234,7 @@ const HwProductList = () => {
                         bg: "whatsapp.400",
                         color: "white",
                       }}
-                      width={"95%"}
+                      width={["95%","95%","95%"]}
                       bg={"yellow"}
                       gap="10px"
                       onClick={(e) => {
@@ -245,9 +245,8 @@ const HwProductList = () => {
                       <Text>Add To Cart</Text>
                     </Button>
                   </Box>
-                </Flex>
-              </Box>
-            ))}
+                    </Box> 
+                </Flex>    ))}
         </SimpleGrid>
       ) : (
         <Center>
