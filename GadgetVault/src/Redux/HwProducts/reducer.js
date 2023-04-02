@@ -1,10 +1,11 @@
-import { GET_PRODUCTS_DATA, GET_PRODUCTS_EAT_WELL, GET_PRODUCTS_ELECTRONICS, PRODUCTS_DATA_FAILURE, PRODUCTS_DATA_REQUEST } from "./actionType"
+import { GET_PRODUCTS_DATA, GET_PRODUCTS_EAT_WELL, GET_PRODUCTS_LAPTOP, GET_PRODUCTS_MOBILES, PRODUCTS_DATA_FAILURE, PRODUCTS_DATA_REQUEST } from "./actionType"
 
 
 const initial={
      HwProducts:[],
      EwProducts:[],
      Electronics:[],
+     Mobiles:[],
      isLoading:false,
      isError:false
 }
@@ -28,10 +29,13 @@ export const reducer=(state=initial,{type,payload})=>{
             return {...state, isLoading:false, isError:false, EwProducts:[...payload]}
         }
 
-        case GET_PRODUCTS_ELECTRONICS:{
+        case GET_PRODUCTS_LAPTOP:{
             return {...state, isLoading:false, isError:false, Electronics:[...payload]}
         }
-
+       
+        case GET_PRODUCTS_MOBILES:{
+            return {...state, isLoading:false, isError:false, Mobiles:[...payload]}
+        }
         default:{
             return state
         }

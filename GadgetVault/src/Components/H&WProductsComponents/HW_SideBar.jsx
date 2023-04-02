@@ -82,12 +82,13 @@ const HwSideBar = () => {
       },[rating,order,search,color,brand])
 
   return (
-    <DIV>
-
-      <Box border={'1px solid grey'} p='5px' marginRight={'2px'} align='left'  marginLeft='10px'>
-      <Heading fontSize={'15px'}>Filter by Rating</Heading>
-        <input  value={1} onChange={handleRating} checked={rating.includes(1)} type="checkbox" />
-        <label>{"\u2605 \u2606 \u2606 \u2606 \u2606"}</label>
+    <Box width={['45%','38%','32%','22%']} marginTop={'12px'} padding={'5px'} marginRight={'6px'} borderRight={'1px solid orange'}>
+      <Heading align='center' color={'gray'} fontSize={'22px'}>Filter Here</Heading>
+      <br />
+      <Box boxShadow= ' rgba(3, 102, 214, 0.3) 0px 0px 0px 3px' borderRadius={'16px'}  border={'0px solid grey'} p='5px' marginRight={'2px'} align='left'  marginLeft='10px'>
+      <Heading color={'orange'} fontSize={'15px'} textDecoration={'underline'} >Filter by Rating</Heading>
+        <input value={1} onChange={handleRating} checked={rating.includes(1)} type="checkbox" />
+        <label >{"\u2605 \u2606 \u2606 \u2606 \u2606"}</label>
         <br />
         <input value={2} onChange={handleRating} checked={rating.includes(2)} type="checkbox" />
         <label>{"\u2605 \u2605 \u2606 \u2606 \u2606"}</label>
@@ -104,38 +105,33 @@ const HwSideBar = () => {
       </Box>
       <br />
 
-      <Box border={'1px solid grey'} p='5px' marginRight={'2px'} align='left'  marginLeft='10px'onChange={handleSort}>
-      <Heading fontSize={'15px'}>Sort By Year</Heading>
+      <Box boxShadow= ' rgba(3, 102, 214, 0.3) 0px 0px 0px 3px' borderRadius={'16px'} p='5px' marginRight={'2px'} align='left'  marginLeft='10px'onChange={handleSort}>
+      <Heading textDecoration={'underline'} color={'orange'} fontSize={'15px'} >Sort By Year</Heading>
         <input name="order" checked={order.includes('asc')}  value={'asc'} type="radio" />
-        <label>Ascending</label>
+        <label fontSize={['10px','12px','15px']}>Ascending</label>
         <br />
         <input  name="order" checked={order.includes('desc')} value={'desc'} type="radio" />
-        <label>Descending</label>
+        <label fontSize={['10px','12px','15px']}>Descending</label>
       </Box>
 
      <br />
-      <Flex direction={['column','column','column','row']} justifyContent={'left'} border={'0px solid orange'} p='0px' marginRight={'2px'} marginLeft='10px'>
+      <Flex  direction={['column','column','column','row']} justifyContent={'left'} border={'0px solid orange'} p='0px' marginRight={'2px'} marginLeft='10px'>
       <Input onChange={handleChange}  width={['100%','80%','50%']} height={'35px'} marginRight={'10px'} isInvalid errorBorderColor='black' focusBorderColor='lime'  placeholder='Search here' />
       <Button onClick={handleSearch} width={['80%','60%','40%']} >Enter</Button>
       </Flex>
       <br />
-      <Box  border={'1px solid grey'} p='5px' marginRight={'2px'} align='left'  marginLeft='10px'>
-      <Heading fontSize={'15px'}>Filter by Color</Heading>
+      <Box boxShadow= ' rgba(3, 102, 214, 0.3) 0px 0px 0px 3px' borderRadius={'16px'} border={'0px solid grey'}  p='5px' marginRight={'2px'} align='left'  marginLeft='10px'>
+      <Heading textDecoration={'underline'} color={'orange'} fontSize={'15px'}>Filter by Color</Heading>
 
-        {/* <SimpleGrid >
-           {HwProducts && HwProducts.map((el)=>(
-           <>
-            <input  value={el.color} onChange={handleColor} checked={color.includes(el.color)} type="checkbox" />
-            <label>{el.color}</label>
-           </>
-        ))}
-        </SimpleGrid> */}
 
         <input  value={'Black'} onChange={handleColor} checked={color.includes('Black')} type="checkbox" />
         <label>Black</label>
         <br />
-        <input value={'Grey'} onChange={handleColor} checked={color.includes('Grey')} type="checkbox" />
-        <label>Grey</label>
+        <input value={'Gray'} onChange={handleColor} checked={color.includes('Gray')} type="checkbox" />
+        <label>Gray</label>
+        <br />
+        <input value={'Silver'} onChange={handleColor} checked={color.includes('Silver')} type="checkbox" />
+        <label>Silver</label>
         <br />
         <input value={'Green'} onChange={handleColor} checked={color.includes('Green')} type="checkbox" />
         <label>Green</label>
@@ -158,8 +154,8 @@ const HwSideBar = () => {
       </Box>
 
 <br />
-      <Box border={'1px solid grey'} p='5px' marginRight={'2px'} align='left' marginLeft='10px'>
-   <Heading fontSize={'15px'}>Filter by Brand</Heading>
+      <Box boxShadow= ' rgba(3, 102, 214, 0.3) 0px 0px 0px 3px' borderRadius={'16px'} border={'0px solid grey'}  p='5px' marginRight={'2px'} align='left' marginLeft='10px'>
+   <Heading textDecoration={'underline'} color={'orange'} fontSize={'15px'}>Filter by Brand</Heading>
 
         {/* <SimpleGrid >
            {HwProducts && HwProducts.map((el)=>(
@@ -185,16 +181,19 @@ const HwSideBar = () => {
         <input value={'Garmin'} onChange={handleBrand} checked={brand.includes('Garmin')} type="checkbox" />
         <label>Garmin</label>
         <br />
+        <input value={'Goli'} onChange={handleBrand} checked={brand.includes('Goli')} type="checkbox" />
+        <label>Goli</label>
+        <br />
       </Box>
 
-    </DIV>
+    </Box>
   );
 };
 
 export default HwSideBar
 
 const DIV = styled.div`
-  width: 20%;
+  width: 35%;
   border-right: 1px solid gray;
 `
 ;

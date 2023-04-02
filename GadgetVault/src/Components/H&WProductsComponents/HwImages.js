@@ -1,8 +1,8 @@
 export const homeImages=[
     {image:'https://pisces.bbystatic.com/image2/BestBuy_US/dam/SOL_88457_flx_stay_fit_DER-a9c718ca-9ea4-4e00-8ce1-e1831fb2e6e8.jpg;maxHeight=264;maxWidth=220',name:'Stay fit and track your progress',id:1},
     {image:'https://pisces.bbystatic.com/image2/BestBuy_US/dam/SOL_88457_flx_eat_well_DER-42599a33-e34f-4f09-8305-05caafc1ae2e.jpg;maxHeight=264;maxWidth=220',name:'Eat well',id:2},
-    {image:'https://pisces.bbystatic.com/image2/BestBuy_US/dam/SOL_88457_flx_live_clean_2_DER-39140cb6-0688-4314-b8ec-95ddcbb8a537.jpg;maxHeight=264;maxWidth=220',name:'Create a healthy environment',id:3},
-    {image:'https://pisces.bbystatic.com/image2/BestBuy_US/dam/SOL_88457_flx_connect_to_care_DER-db587a87-fc35-438f-b55e-7eae84da6863.jpg;maxHeight=264;maxWidth=220',name:'Connect to health care',id:4},
+    {image:'https://pisces.bbystatic.com/image2/BestBuy_US/dam/SOL_88457_flx_connect_to_care_DER-db587a87-fc35-438f-b55e-7eae84da6863.jpg;maxHeight=264;maxWidth=220',name:'Laptops',id:3},
+    {image:'https://pisces.bbystatic.com/image2/BestBuy_US/dam/SOL_88457_flx_connect_to_care_DER-db587a87-fc35-438f-b55e-7eae84da6863.jpg;maxHeight=264;maxWidth=220',name:'Mobiles',id:4},
     {image:'https://pisces.bbystatic.com/image2/BestBuy_US/dam/SOL_88457_flx_look_great_3_DER-8dac81a8-9865-43aa-98f3-3b16255187f4.jpg;maxHeight=264;maxWidth=220',name:'Find your style',id:5},
     {image:'https://pisces.bbystatic.com/image2/BestBuy_US/dam/SOL_88457_flx_recover_DER-ac1f0073-b491-43cf-9eb2-b9cbd5017f59.jpg;maxHeight=264;maxWidth=220',name:'Recover and recharge',id:6} 
   ]
@@ -26,11 +26,11 @@ export const helpInImages=[
     {image:'https://pisces.bbystatic.com/image2/BestBuy_US/Gallery/call_center_mainpage_sol67850_der-185643.jpg;maxHeight=130;maxWidth=192',body:'Find connected-care offerings, along with vendor partnerships and technology leaders that help deliver long-term success for your business.',name:'Commercial services with Best Buy Health.',id:3},
     {image:'https://pisces.bbystatic.com/image2/BestBuy_US/dam/SOL_88457_pol_COPE_home_gym_2_DER-6384f008-166c-4765-ac01-976d92308025.jpg;maxHeight=130;maxWidth=192',body:'Set up a virtual appointment with a Best Buy Home Expert, or choose an in-home consult to help get your home fitness area started.',name:'Consultation for setting up home fitness solutions.',id:4} ]
 
-    export const shopByImages=[
-      {image:'https://i.ibb.co/KrfcbZV/2.png',name:'Help in emergencies — 24/7.',id:2},
-      {image:'https://i.ibb.co/WBgy888/1.png',name:'Get reimbursed for HSA- and FSA-eligible products.*',id:1},
-      {image:'https://i.ibb.co/J7YhqQB/3.png',name:'Commercial services with Best Buy Health.',id:3},
-      {image:'https://i.ibb.co/HBB5gXf/4.png',name:'Consultation for setting up home fitness solutions.',id:4} ]
+    // export const shopByImages=[
+    //   {image:'https://i.ibb.co/KrfcbZV/2.png',name:'Help in emergencies — 24/7.',id:2},
+    //   {image:'https://i.ibb.co/WBgy888/1.png',name:'Get reimbursed for HSA- and FSA-eligible products.*',id:1},
+    //   {image:'https://i.ibb.co/J7YhqQB/3.png',name:'Commercial services with Best Buy Health.',id:3},
+    //   {image:'https://i.ibb.co/HBB5gXf/4.png',name:'Consultation for setting up home fitness solutions.',id:4} ]
   
       
 

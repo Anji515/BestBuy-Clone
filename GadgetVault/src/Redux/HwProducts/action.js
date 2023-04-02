@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { GET_PRODUCTS_DATA, GET_PRODUCTS_EAT_WELL, GET_PRODUCTS_ELECTRONICS, PRODUCTS_DATA_FAILURE, PRODUCTS_DATA_REQUEST } from './actionType';
+import { GET_PRODUCTS_DATA, GET_PRODUCTS_EAT_WELL, GET_PRODUCTS_ELECTRONICS, GET_PRODUCTS_LAPTOP, GET_PRODUCTS_MOBILES, PRODUCTS_DATA_FAILURE, PRODUCTS_DATA_REQUEST } from './actionType';
 
 export const getHwProducts=(paramObj)=>(dispatch)=>{
     dispatch({type:PRODUCTS_DATA_REQUEST}) ;
@@ -18,8 +18,15 @@ export const getEwProducts=(paramObj)=>(dispatch)=>{
 
 export const getLaptopProducts=(paramObj)=>(dispatch)=>{
     dispatch({type:PRODUCTS_DATA_REQUEST}) ;
-    axios.get(`https://backend-for-gadgetvault-qf1o.onrender.com/Products?category=Electronics`,paramObj)
-    .then((res)=>dispatch({type:GET_PRODUCTS_ELECTRONICS,payload:res.data}))
+    axios.get(`https://backend-for-gadgetvault-qf1o.onrender.com/Products?type=Laptop`,paramObj)
+    .then((res)=>dispatch({type:GET_PRODUCTS_LAPTOP,payload:res.data}))
+    .catch(()=>dispatch({type:PRODUCTS_DATA_FAILURE}))
+}
+
+export const getMobileProducts=(paramObj)=>(dispatch)=>{
+    dispatch({type:PRODUCTS_DATA_REQUEST}) ;
+    axios.get(`https://backend-for-gadgetvault-qf1o.onrender.com/Products?type=Mobile`,paramObj)
+    .then((res)=>dispatch({type:GET_PRODUCTS_MOBILES,payload:res.data}))
     .catch(()=>dispatch({type:PRODUCTS_DATA_FAILURE}))
 }
 
