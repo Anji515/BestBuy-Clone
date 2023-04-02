@@ -8,6 +8,7 @@ import { Login } from "../Components/Login/Login";
 import { SingleProduct } from "../Pages/SingleProductPage/SingleProduct";
 import { Cart } from "../Pages/Cart/Cart";
 import { PrivateRoute } from "./PrivateRoute";
+import Bestdeal from "../Pages/Bestdeal";
 
 const MainRoutes = () => {
   return (
@@ -33,6 +34,7 @@ const MainRoutes = () => {
           }
         />
         <Route path="/products/:id" element={<SingleProduct />} />
+        <Route path="/bestdeal" element={<Bestdeal/>} />
       </Routes>
     </div>
   );
