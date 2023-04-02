@@ -8,13 +8,15 @@ import Sidebar from './Components/AdminDashboard/Sidebar';
 import MainRoutes from './Routing/MainRoutes';
 import { AdminRouting } from './Routing/AdminRouting';
 import { AdminSide } from './ContextAPi/AdminProvider';
+import NavbarFinal from './Components/NavBar/NavbarFinal';
 
 function App() {
   const { admin } = useContext(AdminSide)
   return (
     <BrowserRouter>
       {!admin ? <div className="App">
-        <NavBar />
+        {/* <NavBar /> */}
+        <NavbarFinal/>
         <MainRoutes />
         <Footer />
       </div> : <div className="App">

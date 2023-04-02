@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  Flex,
   FormControl,
   Heading,
   Image,
@@ -10,14 +11,15 @@ import Logo from "../../Images/Logo.png";
 import styled from "@emotion/styled";
 import { Login } from "../Login/Login";
 import { Link } from "react-router-dom";
+import { Link as Goto } from "react-router-dom";
 import { useSelector } from "react-redux";
 export const NavBar = () => {
   const UserName = useSelector((store) => store.AuthReducer.UserName);
   return (
     <DIV>
-      <Box id="main">
-        <Image w={"10%"} src={Logo} alt="logo" />
-        <FormControl w={"30%"} display={["none", "none", "flex", "flex"]}>
+      <Flex id="main" justify={'space-between'} border={'0px solid red'}>
+        <Box border={'1px solid green'} width={'30%'}> <Goto to='/' ><Image w={"40%"} src={Logo} alt="logo" /></Goto></Box>
+        <FormControl border={'1px solid blue'} w={"30%"} marginLeft={'-20%'} display={["none", "none", "flex", "flex"]}>
           <Input type="text" bg={"white"} placeholder="Search GadgetVault" />
           <Button type="submit" ml={-2} size={"md"}>
             Search
@@ -35,10 +37,10 @@ export const NavBar = () => {
         ) : (
           <Login />
         )}
-      </Box>
+      </Flex>
 
-      <Box id="buttons">
-        <Box>
+      <Box id="buttons" border={'0px solid red'} width={'40%'}>
+        <Flex width={'10%'}  justify={'space-evenly'} gap={'10px'}>
           <Link id="top" to="/bestdeal">
             Top Deals
           </Link>
@@ -48,7 +50,7 @@ export const NavBar = () => {
           </Link>
           <p id="deal">Deal of the Day</p>
           <p className="other other1">Credit Cards</p>
-        </Box>
+        </Flex>
         <Box display={["none", "none", "flex", "flex"]}>
           <select className="other" name="" id="">
             <option value="">Recently Viewed</option>
