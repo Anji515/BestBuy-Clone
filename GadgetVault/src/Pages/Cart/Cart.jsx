@@ -17,6 +17,7 @@ import {
   Divider,
 } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 // import Checkout from "./Checkout";
 
 export const Cart = () => {
@@ -179,9 +180,7 @@ export const Cart = () => {
                         Remove
                       </Button>
                     </Td>
-                    <Td fontWeight={500}>
-                      $ {parseInt(el.count * el.price)}
-                    </Td>
+                    <Td fontWeight={500}>$ {parseInt(el.count * el.price)}</Td>
                   </Tr>
                 );
               })}
@@ -224,7 +223,7 @@ export const Cart = () => {
             </Box>
           </Flex>
           <Button mt={5} bg={"yellow.300"} w="100%">
-            Checkout
+            <Link to="/payment">Checkout</Link>
           </Button>
         </Box>
       </Flex>
