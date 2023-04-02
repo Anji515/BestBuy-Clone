@@ -3,7 +3,6 @@ import {
     FaTh,
     FaBars,
     FaUserAlt,
-    FaRegChartBar,
     FaShoppingBag
 }from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
@@ -24,11 +23,6 @@ const Sidebar = ({children}) => {
             path:"/about",
             name:"About",
             icon:<FaUserAlt/>
-        },
-        {
-            path:"/analytics",
-            name:"Analytics",
-            icon:<FaRegChartBar/>
         },
         {
             path:"/product",

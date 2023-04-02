@@ -18,7 +18,7 @@ function App() {
         <MainRoutes />
         <Footer />
       </div> : <div className="App">
-        <Sidebar />
+        {/* <Sidebar /> */}
         <AdminRouting />
       </div>}
     </BrowserRouter>
