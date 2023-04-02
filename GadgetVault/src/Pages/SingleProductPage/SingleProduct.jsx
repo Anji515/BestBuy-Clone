@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import styled from "@emotion/styled";
 import {
   Box,
@@ -32,6 +32,9 @@ export const SingleProduct = () => {
   const [mainImage, setMainImage] = useState("");
   const toast = useToast;
   const { id } = useParams();
+  let { auth } = useSelector((store) => store.AuthReducer);
+  const navigate = useNavigate();
+  const location = useLocation();
   //   console.log(id);
   useEffect(() => {
     setLoading(true);
@@ -49,8 +52,24 @@ export const SingleProduct = () => {
   let localstorageData = JSON.parse(localStorage.getItem("Cart"));
 
   const handleCart = () => {
-    localstorageData.push(data);
-    localStorage.setItem("Cart", JSON.stringify(localstorageData));
+    if (auth) {
+      localstorageData.push(data);
+      localStorage.setItem("Cart", JSON.stringify(localstorageData));
+      alert("success");
+      // toast({
+      //   title: "Added to Cart",
+      //   status: "success",
+      //   isClosable: true,
+      // });
+    } else {
+      alert("login to continue");
+
+      // toast({
+      //   title: "Please Login",
+      //   status: "error",
+      //   isClosable: true,
+      // });
+    }
   };
 
   return loading ? (

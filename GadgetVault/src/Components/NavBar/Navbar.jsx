@@ -17,40 +17,39 @@ export const NavBar = () => {
     <DIV>
       <Box id="main">
         <Image w={"10%"} src={Logo} alt="logo" />
-        <FormControl w={"30%"} display="flex">
+        <FormControl w={"30%"} display={["none", "none", "flex", "flex"]}>
           <Input type="text" bg={"white"} placeholder="Search GadgetVault" />
           <Button type="submit" ml={-2} size={"md"}>
             Search
           </Button>
         </FormControl>
-        <Box>
+
+        <Heading color="white" bg={"none"} fontWeight="600" fontSize={20}>
+          <Link to={"/cart"}>Cart</Link>
+        </Heading>
+
+        {UserName ? (
           <Heading color="white" bg={"none"} fontWeight="600" fontSize={20}>
-            <Link to={"/cart"}>Cart</Link>
+            Hello, {UserName}
           </Heading>
-        </Box>
-        <Box>
-          {UserName ? (
-            <Heading color="white" bg={"none"} fontWeight="600" fontSize={20}>
-              Hello, {UserName}
-            </Heading>
-          ) : (
-            <Login />
-          )}
-        </Box>
+        ) : (
+          <Login />
+        )}
       </Box>
 
       <Box id="buttons">
         <Box>
-          <p id="top">Top Deals</p>
+          <Link id="top" to="/bestdeal">
+            Top Deals
+          </Link>
+          {/* <p id="top">Top Deals</p> */}
           <Link to="/hwhome" id="top">
             Health & Wellness
           </Link>
           <p id="deal">Deal of the Day</p>
           <p className="other other1">Credit Cards</p>
-          <p className="other other1">Gift Cards</p>
-          <p className="other other1">Gift Ideas</p>
         </Box>
-        <Box>
+        <Box display={["none", "none", "flex", "flex"]}>
           <select className="other" name="" id="">
             <option value="">Recently Viewed</option>
           </select>
@@ -67,16 +66,16 @@ export const NavBar = () => {
 };
 
 const DIV = styled.div`
-  /* #main > select > option, */
   #main {
     height: 70px;
-    background-color: #0046be;
+    background-color: #202020;
     display: flex;
     margin: auto;
     padding-left: 10px;
     padding-right: 10px;
     justify-content: space-between;
     align-items: center;
+    width:100%
   }
 
   /* Second div  */
@@ -84,8 +83,8 @@ const DIV = styled.div`
   #buttons {
     height: 50px;
     width: 100%;
-    border-top: 0.5px solid #1e88e5;
-    background-color: #0046be;
+    border-top: 0.5px solid #606060;
+    background-color: #202020;
     display: flex;
     justify-content: space-between;
     font-family: "Raleway", sans-serif;
@@ -107,7 +106,7 @@ const DIV = styled.div`
     margin-right: 3.5%;
   }
   #buttons select {
-    background-color: #0046be;
+    background-color: #202020;
     color: white;
     font-size: 14px;
     border: none;
