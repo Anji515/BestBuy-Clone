@@ -26,7 +26,6 @@ const Add = () => {
 
     const handlesubmit = (e) =>{
         e.preventDefault()
-        console.log((product));
         dispatch(addProduct(product))
         setproduct(intialstate)
     }
