@@ -10,10 +10,10 @@ import { Cart } from "../Pages/Cart/Cart";
 import { PrivateRoute } from "./PrivateRoute";
 import Bestdeal from "../Pages/Bestdeal";
 
-import Payment from "../Pages/Payment/Payment";
-import { Credicard } from "../Pages/Payment/Creditcard";
+
 
 import PageNotFound from "../Pages/PageNotFound";
+import Payment from "../Pages/Payment/Payment";
 
 
 const MainRoutes = () => {
@@ -24,12 +24,10 @@ const MainRoutes = () => {
         <Route path="/hwhome" element={<HwHome />} />
         <Route path="/HwPrdoucts" element={<HwPrdoucts />} />
 
-        <Route path="/payment" element={<Payment />} />
-        <Route path="/paymentdetails" element={<Credicard />} />
-
         <Route path="/EwPrdoucts" element={<HwPrdoucts />} />
         <Route path="/electronics" element={<HwPrdoucts />} />
         <Route path="/Mobiles" element={<HwPrdoucts />} />
+        <Route path="/payment" element={<Payment />} />
 
         <Route
           path="/login"

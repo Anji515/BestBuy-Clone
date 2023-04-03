@@ -79,6 +79,9 @@ const HwProductList = () => {
     });
     if (!exist) {
       setCart([...updatedCart, { ...item, count: 1 }]);
+      alert("Product Added to the cart")
+    }else{
+      alert("Product already in the cart")
     }
   };
 
