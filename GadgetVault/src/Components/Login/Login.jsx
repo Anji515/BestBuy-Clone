@@ -20,6 +20,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { SignIn, SignUp } from "../../Redux/AuthReducer/action";
 import { AdminSide } from "../../ContextAPi/AdminProvider";
+import { FiLogIn } from "react-icons/fi";
 
 export const Login = () => {
   const { setAdmin } = useContext(AdminSide);
@@ -98,12 +99,12 @@ export const Login = () => {
       <Button
         onClick={onOpen}
         color="white"
-        bg={"none"}
-        fontWeight="600"
-        fontSize={20}
-        _hover={{ bg: "none" }}
+        bg={"whatsapp.500"}
+        _hover={{
+          bg:'whatsapp.300'
+        }}
       >
-        <Link to="/login">Login</Link>
+        <Link to="/login">Login</Link> <FiLogIn/>
       </Button>
       <Modal
         initialFocusRef={initialRef}
