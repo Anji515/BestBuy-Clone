@@ -8,6 +8,33 @@
 #### fw23_0868 - harshal bhawsar	
 #### fp07_334  -  Aniket Ghormare
 
+Original website link: https://www.kfc.com/
+<br/>
+Link of our deployed project:  https://elegant-lolly-ab23bc.netlify.app
+<br/>
+
+## Tech Stack and Features
+
+- HTML5
+- CSS3
+- JavaScript
+- React.Js
+- Redux
+- Chakra Ui
+- Json-Server
+
+
+
+## Pages and features
+- Home Page:- Navigation Bar, Footer.
+- Admin Page :- Admin dashboard.
+- Account Page:- User authentication using json server.
+- Product Page:- It has sorting & filtering functionality , search functionality.
+- Cart Page :- Dyanamic cart
+- Payment Page
+
+
+### Glimpse and screenshots of our cloned website:
 
 ## Landing Page
 
