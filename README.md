@@ -8,9 +8,9 @@
 #### fw23_0868 - harshal bhawsar	
 #### fp07_334  -  Aniket Ghormare
 
-Original website link: https://www.kfc.com/
+Original website link: https://www.bestbuy.com/
 <br/>
-Link of our deployed project:  https://elegant-lolly-ab23bc.netlify.app
+Link of our deployed project:  [gadgetvault.netlify.app/](https://gadgetvault.netlify.app/)
 <br/>
 
 ## Tech Stack and Features
