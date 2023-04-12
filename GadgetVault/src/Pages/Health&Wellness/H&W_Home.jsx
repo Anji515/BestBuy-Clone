@@ -9,7 +9,7 @@ const HwHome = () => {
   const navigate=useNavigate()
 
   const hanldePage=(id)=>{
-     console.log('id:', id)
+    //  console.log('id:', id)
      if(id==1){
      navigate('/HwPrdoucts')
      }

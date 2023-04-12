@@ -3,6 +3,12 @@ import "./Payment.css"
 import { Link } from 'react-router-dom'
 
 const Payment = () => {
+
+  const handlePayment=() => {
+    alert("Payment Successfull.")
+    localStorage.removeItem("Cart")
+  }
+
   return (
     <div>
 
@@ -10,7 +16,7 @@ const Payment = () => {
   <div class="overlay_blur hidden"></div>
   <div class="notification_container hidden">
     <h1>Your order has been placed !</h1>
-    <a href="/Home page/Index.html"></a><button class="btn"><i class="fa fa-home"></i> Home</button>
+    <a href="/Home page/Index.html"><button class="btn"><i class="fa fa-home"></i> Home</button></a>
   </div>
   <div class="mainInfoCard">
     <div class="headImage">
@@ -58,7 +64,7 @@ const Payment = () => {
       </div>
       <div class="btn-part">
         <button type="button" class="return-btn">❮ Return to cart</button>
-        <button type="submit" class="Continue-btn" onClick={() => alert("Payment Successfull.")} ><Link to={"/"}>Continue to Payment</Link> </button>
+        <button type="submit" class="Continue-btn" onClick={handlePayment} ><Link to={"/"}>Continue to Payment</Link> </button>
       </div>
       <footer>
         <hr />

@@ -32,7 +32,7 @@ const HwProductList = () => {
   console.log("EwProducts:", Electronics);
 
   const { pathname } = useLocation();
-  console.log("location:", pathname);
+  // console.log("location:", pathname);
 
   let productsData;
   if (pathname == "/HwPrdoucts") {
@@ -44,7 +44,7 @@ const HwProductList = () => {
   }  else if (pathname == "/Mobiles") {
     productsData = Mobiles;
   }
-  console.log("productsData:", productsData);
+  // console.log("productsData:", productsData);
 
   const dispatch = useDispatch();
 
@@ -71,7 +71,6 @@ const HwProductList = () => {
     let exist = false;
     const updatedCart = cart.map((data) => {
       if (data.id === item.id) {
-        //  console.log(item.id)
         exist = true;
         return { ...data };
       }
