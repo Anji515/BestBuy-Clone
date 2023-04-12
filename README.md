@@ -9,7 +9,7 @@
 
 Original website link: https://www.bestbuy.com/
 <br/>
-Link of our deployed project:  [gadgetvault.netlify.app/](https://gadgetvault.netlify.app/)
+Link of our deployed project:  [gadgetvault.netlify.app](https://fanciful-mermaid-4e6fb4.netlify.app/)
 <br/>
 
 ## Tech Stack and Features
