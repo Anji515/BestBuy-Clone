@@ -107,9 +107,10 @@ export default function NavbarFinal() {
         ) : (          
         <Login />       
          )}
-          <Goto to='/'><Button background={'#9a455b'} _hover={{
+           {UserName && <Goto to='/'><Button background={'#9a455b'} _hover={{
           bg:'#f40b49'
         }}  onClick={''} color={'white'} >Logout <FiLogOut/></Button> </Goto>
+           }
           <Goto to='/cart'><Button background={'orange.500'} _hover={{
           bg:'orange.600'
         }} color={'white'}  width={'100px'}><FiShoppingCart/>  Cart</Button></Goto>
